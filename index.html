@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nitya Mittal | Portfolio</title>
+    <!-- We keep the Tailwind CDN for simplicity in this setup. 
+         For a full production app, migrating to a local postcss setup is recommended, 
+         but this works perfectly for GitHub Pages. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#141414',
+              surface: '#1f1f1f',
+              primary: '#6366f1',
+              secondary: '#94a3b8',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+      body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: #141414;
+        color: #ffffff;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      ::-webkit-scrollbar { width: 8px; background: #141414; }
+      ::-webkit-scrollbar-track { background: #141414; }
+      ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #444; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#141414] text-white antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
